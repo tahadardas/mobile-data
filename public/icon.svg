@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="phoneBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e2338" />
+      <stop offset="100%" stop-color="#081422" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer Ambient Glow Ring -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.25" />
+
+  <!-- Smartphone Body -->
+  <g filter="url(#glow)">
+    <!-- Phone Outer Shell -->
+    <rect x="146" y="70" width="220" height="372" rx="36" fill="#1e293b" stroke="url(#phoneBorder)" stroke-width="6" />
+    
+    <!-- Screen -->
+    <rect x="162" y="100" width="188" height="312" rx="22" fill="url(#screenGrad)" />
+    
+    <!-- Notch / Dynamic Island -->
+    <rect x="220" y="84" width="72" height="10" rx="5" fill="#334155" />
+    <circle cx="276" cy="89" r="3" fill="#22d3ee" opacity="0.8" />
+    
+    <!-- Screen Content: Installment Cards -->
+    <!-- Card 1 (Paid Installment) -->
+    <rect x="178" y="126" width="156" height="42" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="1.5" />
+    <circle cx="196" cy="147" r="10" fill="#10b981" />
+    <path d="M192 147 L195 150 L201 144" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="214" y="140" width="70" height="6" rx="3" fill="#e2e8f0" />
+    <rect x="214" y="150" width="45" height="4" rx="2" fill="#38bdf8" />
+    <text x="318" y="151" fill="#10b981" font-family="'Cairo', sans-serif" font-size="12" font-weight="bold" text-anchor="end">$</text>
+
+    <!-- Card 2 (Active/Current Installment) -->
+    <rect x="178" y="178" width="156" height="42" rx="10" fill="#182e4b" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="196" cy="199" r="10" fill="#0284c7" />
+    <circle cx="196" cy="199" r="4" fill="#ffffff" />
+    <rect x="214" y="192" width="60" height="6" rx="3" fill="#e2e8f0" />
+    <rect x="214" y="202" width="40" height="4" rx="2" fill="#94a3b8" />
+    <text x="318" y="203" fill="#38bdf8" font-family="'Cairo', sans-serif" font-size="12" font-weight="bold" text-anchor="end">$</text>
+
+    <!-- Card 3 (Remaining Installment) -->
+    <rect x="178" y="230" width="156" height="42" rx="10" fill="#0f1f33" stroke="#334155" stroke-width="1" />
+    <circle cx="196" cy="251" r="10" fill="#334155" />
+    <rect x="214" y="244" width="55" height="6" rx="3" fill="#64748b" />
+    <rect x="214" y="254" width="35" height="4" rx="2" fill="#475569" />
+
+    <!-- Progress Gauge / Chart on Screen -->
+    <path d="M 188 320 A 48 48 0 0 1 324 320" fill="none" stroke="#1e293b" stroke-width="10" stroke-linecap="round" />
+    <path d="M 188 320 A 48 48 0 0 1 295 282" fill="none" stroke="#06b6d4" stroke-width="10" stroke-linecap="round" />
+    <text x="256" y="318" fill="#ffffff" font-family="'Cairo', sans-serif" font-size="16" font-weight="900" text-anchor="middle">75%</text>
+    <text x="256" y="336" fill="#38bdf8" font-family="'Cairo', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">محاسبة جوالات</text>
+
+    <!-- Home Indicator -->
+    <rect x="226" y="420" width="60" height="4" rx="2" fill="#64748b" />
+  </g>
+
+  <!-- Golden Syrian Star / Security Badge in Lower Right -->
+  <g transform="translate(340, 340)">
+    <circle cx="40" cy="40" r="38" fill="#0f172a" stroke="#f59e0b" stroke-width="4" filter="url(#glow)" />
+    <circle cx="40" cy="40" r="32" fill="url(#accentGrad)" />
+    <!-- Checkmark Badge -->
+    <path d="M28 40 L36 48 L52 32" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
